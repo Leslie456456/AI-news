@@ -1,9 +1,9 @@
 name: Daily AI News Briefing
 
 on:
-  schedule:
-    - cron: '0 21 * * *'
   workflow_dispatch:
+  schedule:
+    - cron: "0 21 * * *"
 
 jobs:
   generate-briefing:
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
